@@ -1,0 +1,20 @@
+Source,Target,Weight
+Thomas Lawrence,Aldo Bellini,2
+Thomas Lawrence,Agnes,3
+Thomas Lawrence,Joseph Tremblay,1
+Thomas Lawrence,Goffredo Tedesco,1
+Thomas Lawrence,Lombardi,1
+Aldo Bellini,Joseph Tremblay,1
+Aldo Bellini,Joshua Adeyemi,1
+Aldo Bellini,Raymond O'Malley,1
+Aldo Bellini,Agnes,1
+Joseph Tremblay,Joshua Adeyemi,1
+Joseph Tremblay,Raymond O'Malley,1
+Joshua Adeyemi,Raymond O'Malley,2
+Vincent Benitez,Sabbadin,2
+Vincent Benitez,Goffredo Tedesco,1
+Vincent Benitez,Mandorff,1
+Sabbadin,Goffredo Tedesco,1
+Sabbadin,Mandorff,1
+Mandorff,Goffredo Tedesco,1
+Janusz Woźniak,Villanueva,1

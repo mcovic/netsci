@@ -1,0 +1,106 @@
+<?xml version='1.0' encoding='utf-8'?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+  <key id="d1" for="edge" attr.name="weight" attr.type="long" />
+  <key id="d0" for="node" attr.name="community" attr.type="long" />
+  <graph edgedefault="undirected">
+    <node id="Thomas Lawrence">
+      <data key="d0">2</data>
+    </node>
+    <node id="Aldo Bellini">
+      <data key="d0">0</data>
+    </node>
+    <node id="Joseph Tremblay">
+      <data key="d0">0</data>
+    </node>
+    <node id="Joshua Adeyemi">
+      <data key="d0">0</data>
+    </node>
+    <node id="Raymond O'Malley">
+      <data key="d0">0</data>
+    </node>
+    <node id="Vincent Benitez">
+      <data key="d0">1</data>
+    </node>
+    <node id="Sabbadin">
+      <data key="d0">1</data>
+    </node>
+    <node id="Mandorff">
+      <data key="d0">1</data>
+    </node>
+    <node id="Goffredo Tedesco">
+      <data key="d0">1</data>
+    </node>
+    <node id="Agnes">
+      <data key="d0">2</data>
+    </node>
+    <node id="Janusz Woźniak">
+      <data key="d0">3</data>
+    </node>
+    <node id="Villanueva">
+      <data key="d0">3</data>
+    </node>
+    <node id="Lombardi">
+      <data key="d0">2</data>
+    </node>
+    <node id="Shanumi">
+      <data key="d0">4</data>
+    </node>
+    <edge source="Thomas Lawrence" target="Aldo Bellini">
+      <data key="d1">2</data>
+    </edge>
+    <edge source="Thomas Lawrence" target="Agnes">
+      <data key="d1">3</data>
+    </edge>
+    <edge source="Thomas Lawrence" target="Joseph Tremblay">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="Thomas Lawrence" target="Goffredo Tedesco">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="Thomas Lawrence" target="Lombardi">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="Aldo Bellini" target="Joseph Tremblay">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="Aldo Bellini" target="Joshua Adeyemi">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="Aldo Bellini" target="Raymond O'Malley">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="Aldo Bellini" target="Agnes">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="Joseph Tremblay" target="Joshua Adeyemi">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="Joseph Tremblay" target="Raymond O'Malley">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="Joshua Adeyemi" target="Raymond O'Malley">
+      <data key="d1">2</data>
+    </edge>
+    <edge source="Vincent Benitez" target="Sabbadin">
+      <data key="d1">2</data>
+    </edge>
+    <edge source="Vincent Benitez" target="Goffredo Tedesco">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="Vincent Benitez" target="Mandorff">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="Sabbadin" target="Goffredo Tedesco">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="Sabbadin" target="Mandorff">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="Mandorff" target="Goffredo Tedesco">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="Janusz Woźniak" target="Villanueva">
+      <data key="d1">1</data>
+    </edge>
+  </graph>
+</graphml>
