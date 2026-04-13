@@ -1,6 +1,6 @@
 import marimo
 
-__generated_with = "0.0.0"
+__generated_with = "0.21.1"
 app = marimo.App(width="medium")
 
 
@@ -18,17 +18,14 @@ def _():
     data_path = Path(__file__).with_name("web-Google.txt.gz")
     if not data_path.exists():
         raise FileNotFoundError(f"Could not find dataset at {data_path}")
-
     return data_path, deque, gzip, mo, nx, plt, random
 
 
 @app.cell
 def _(mo):
-    mo.md(
-        """
-        # Exercise 02
-        """
-    )
+    mo.md("""
+    # Exercise 02
+    """)
     return
 
 
@@ -54,11 +51,9 @@ def _():
 
 @app.cell
 def _(mo):
-    mo.md(
-        """
-        The commented code above, on its own, is practically (usually) useless since it uses the above sampling method on a relatively big dataset which won't reallz work considering how small the wanted sample (200-300 nodes) is.
-        """
-    )
+    mo.md("""
+    The commented code above, on its own, is practically (usually) useless since it uses the above sampling method on a relatively big dataset which won't reallz work considering how small the wanted sample (200-300 nodes) is.
+    """)
     return
 
 
@@ -89,7 +84,7 @@ def _(data_path, deque, gzip, random):
 
     # keep edges inside sampled nodes
     sample_edges = [(_u, _v) for _u in visited for _v in adj.get(_u, []) if _v in visited]
-    return adj, sample_edges, start, visited
+    return sample_edges, visited
 
 
 @app.cell
@@ -99,7 +94,7 @@ def _(nx, sample_edges, visited):
     G.add_edges_from(sample_edges)
 
     print(f"Nodes: {nx.number_of_nodes(G)}, Vertices: {nx.number_of_edges(G)}")
-    return G
+    return (G,)
 
 
 @app.cell
@@ -114,18 +109,16 @@ def _(G):
     avg_in = sum(in_degrees.values()) / len(in_degrees)
     avg_out = sum(out_degrees.values()) / len(out_degrees)
     print(f"\nAverage in-degree: {avg_in:.2f}, Average out-degree: {avg_out:.2f}")
-    return avg_in, avg_out, in_degrees, out_degrees
+    return in_degrees, out_degrees
 
 
 @app.cell
 def _(mo):
-    mo.md(
-        """
-        In-links and out-links degrees are quite varied on the web as it could be expected (and viewed from the above in/out degree results). For example, while a site like Facebook has many in-links (due to popularity) there, a more obscure collection of blogs might have many out-links, but not many in-links.
+    mo.md("""
+    In-links and out-links degrees are quite varied on the web as it could be expected (and viewed from the above in/out degree results). For example, while a site like Facebook has many in-links (due to popularity) there, a more obscure collection of blogs might have many out-links, but not many in-links.
 
-        Average in-degrees and out-degrees are the same which makes sense for a directed graph.
-        """
-    )
+    Average in-degrees and out-degrees are the same which makes sense for a directed graph.
+    """)
     return
 
 
@@ -144,11 +137,9 @@ def _(in_degrees, out_degrees, plt):
 
 @app.cell
 def _(mo):
-    mo.md(
-        """
-        The nodes (websites) have a relatively wide range of degrees ("in" and "out" hyperlinks), but nonetheless, most nodes exhibit a much lower degree of connectivity.
-        """
-    )
+    mo.md("""
+    The nodes (websites) have a relatively wide range of degrees ("in" and "out" hyperlinks), but nonetheless, most nodes exhibit a much lower degree of connectivity.
+    """)
     return
 
 
@@ -159,16 +150,14 @@ def _(G, nx):
 
     largest_weak = max(weak_cc, key=len)
     print(f"Largest weakly connected component size: {len(largest_weak)}")
-    return largest_weak, weak_cc
+    return
 
 
 @app.cell
 def _(mo):
-    mo.md(
-        """
-        All of the sampled nodes make one big weakly connected component (graph, or rather subgraph)
-        """
-    )
+    mo.md("""
+    All of the sampled nodes make one big weakly connected component (graph, or rather subgraph)
+    """)
     return
 
 
@@ -179,16 +168,14 @@ def _(G, nx):
 
     largest_strong = max(strong_cc, key=len)
     print(f"Largest strongly connected component size: {len(largest_strong)}")
-    return largest_strong, strong_cc
+    return (largest_strong,)
 
 
 @app.cell
 def _(mo):
-    mo.md(
-        """
-        There are more SCCs than WCCs which is to be expected.
-        """
-    )
+    mo.md("""
+    There are more SCCs than WCCs which is to be expected.
+    """)
     return
 
 
@@ -203,16 +190,14 @@ def _(G, largest_strong, nx, random):
     print(f"Shortest path from {_u} to {_v}: {shortest_path}")
 
     print(f"Number of edges in this path: {len(shortest_path)-1}")
-    return H, shortest_path
+    return
 
 
 @app.cell
 def _(mo):
-    mo.md(
-        """
-        The above code shows the shortest path between 2 random nodes.
-        """
-    )
+    mo.md("""
+    The above code shows the shortest path between 2 random nodes.
+    """)
     return
 
 
@@ -234,16 +219,14 @@ def _(G, nx, plt, random):
 
     plt.title(f"Neighborhood of node {center_node}")
     neighborhood_fig
-    return center_node, neighbors, subG
+    return
 
 
 @app.cell
 def _(mo):
-    mo.md(
-        """
-        The above directed graph shows just a small sample of an interconnected network that is, even now, quite difficult to decipher due to the vast number of vertices and edges.
-        """
-    )
+    mo.md("""
+    The above directed graph shows just a small sample of an interconnected network that is, even now, quite difficult to decipher due to the vast number of vertices and edges.
+    """)
     return
 
 
